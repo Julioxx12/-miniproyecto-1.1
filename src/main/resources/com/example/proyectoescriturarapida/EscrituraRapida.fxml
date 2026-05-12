@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoescriturarapida.controller.GameController">
+   <children>
+      <AnchorPane prefHeight="580.0" prefWidth="667.0">
+         <children>
+
+            <!-- Fondo -->
+            <ImageView fitHeight="580.0" fitWidth="667.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@images/inicio.jpeg" />
+               </image>
+            </ImageView>
+
+            <!-- Boton reglas (arriba izquierda) -->
+            <Button layoutX="24.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleMostrarReglas" style="-fx-background-color: rgba(0,0,0,0.6); -fx-text-fill: white;                            -fx-font-family: Impact; -fx-font-size: 16; -fx-cursor: hand;                            -fx-background-radius: 10; -fx-padding: 6 12 6 12;" text="¿Cómo se juega?" />
+
+            <!-- Timer (arriba derecha) -->
+            <Label fx:id="timerLabel" alignment="CENTER_RIGHT" layoutX="464.0" layoutY="51.0" prefHeight="40.0" prefWidth="163.0" style="-fx-text-fill: white; -fx-font-family: Impact; -fx-font-size: 26;" text="Tiempo: 20" />
+
+            <!-- Palabra objetivo (centro alto) -->
+            <Label fx:id="targetWordLabel" alignment="CENTER" layoutX="84.0" layoutY="226.0" prefHeight="64.0" prefWidth="500.0" style="-fx-text-fill: white; -fx-font-family: Impact; -fx-font-size: 36;                           -fx-effect: dropshadow(gaussian, black, 8, 0.6, 0, 0);" />
+
+            <!-- Campo de texto -->
+            <TextField fx:id="typingField" layoutX="134.0" layoutY="366.0" onAction="#handleSetWord" prefHeight="46.0" prefWidth="400.0" promptText="Escribe aquí y presiona ENTER" style="-fx-font-family: Impact; -fx-font-size: 20;                               -fx-background-radius: 10;" />
+
+            <!-- Feedback (correcto / incorrecto / tiempo) -->
+            <Label fx:id="feedbackLabel" alignment="CENTER" layoutX="134.0" layoutY="399.0" prefHeight="28.0" prefWidth="400.0" style="-fx-font-family: Impact; -fx-font-size: 20;" />
+
+            <!-- Boton INICIAR -->
+            <Button fx:id="btnIniciar" layoutX="224.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="48.0" prefWidth="220.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;                            -fx-background-radius: 24; -fx-font-family: Impact;                            -fx-font-size: 22; -fx-cursor: hand;" text="INICIAR JUEGO" />
+
+            <!-- Boton ENVIAR -->
+            <Button layoutX="264.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleSetWord" prefHeight="42.0" prefWidth="140.0" style="-fx-background-color: #c0392b; -fx-text-fill: white;                            -fx-background-radius: 20; -fx-font-family: Impact;                            -fx-font-size: 20; -fx-cursor: hand;" text="ENVIAR" />
+
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
