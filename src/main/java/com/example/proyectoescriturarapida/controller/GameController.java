@@ -71,7 +71,7 @@ public class GameController {
      */
     @FXML
     void handleStartGame(ActionEvent event) {
-        btnIniciar.setDisable(true);
+        btnIniciar.setVisible(true);
         typingField.clear();
         typingField.setDisable(false);
         feedbackLabel.setText("");
